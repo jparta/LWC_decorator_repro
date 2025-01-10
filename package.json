@@ -14,7 +14,9 @@
     "prettier:verify": "prettier --check \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "postinstall": "husky init",
     "precommit": "lint-staged",
-    "prepare": "husky"
+    "prepare": "husky",
+    "ts-build": "tsc --project force-app/main/default/lwc",
+    "build-and-deploy": "npm run ts-build && sfdx project deploy start"
   },
   "devDependencies": {
     "@lwc/eslint-plugin-lwc": "^1.1.2",
